@@ -1,6 +1,6 @@
-<div class="bg-green-800 z-30 h-screen flex right-0 top-0 bottom-0 border-l border-background-700">
-    <div class="flex flex-col z-40 justify-between h-full p-1 md:p-3 bg-gray-800 ">
-        <div class="text-4xl md:text-5xl text-gray-400 hover:text-gray-500 cursor-pointer">
+<div class="z-20">
+    <div class="flex flex-col z-40 justify-between h-full p-1 md:p-3 bg-background-800 ">
+        <div class="text-4xl md:text-5xl text-font-secondary hover:text-font-hover cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-em w-em" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
                       d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -10,7 +10,7 @@
     </div>
 </div>
 
-<div class="fixed bg-gray-800 z-30 h-screen flex right-0 top-0 bottom-0 border-l border-background-700" x-data="{ open: false }" @click.outside="open = false">
+<div class="fixed bg-background-800 z-30 h-screen flex right-0 top-0 bottom-0 border-l border-background-700" x-data="{ open: false }" @click.outside="open = false">
     <div
         x-show="open"
         x-transition:enter="transition ease-in-out duration-300 transform"
@@ -19,7 +19,7 @@
         x-transition:leave="transition ease-in-out duration-300 transform"
         x-transition:leave-start="translate-x-0"
         x-transition:leave-end="translate-x-full"
-       class="absolute right-full flex flex-col justify-between py-3 px-5 h-full md:w-auto bg-opacity-90 bg-gray-800"
+       class="absolute right-full flex flex-col justify-between py-3 px-5 h-full md:w-auto bg-opacity-90 bg-background-800"
     >
         <nav class="space-y-5 flex-grow">
             <a href="/" class="px-3 block flex items-center">
@@ -27,12 +27,12 @@
                     <img class="h-full w-full"
                          src="https://tailwindui.com/img/logos/workflow-mark-teal-200-cyan-400.svg" alt="">
                 </div>
-                <div class="text-xl text-gray-50 uppercase ml-2">BitBench</div>
+                <div class="text-xl text-font-primary uppercase ml-2">BitBench</div>
             </a>
             {{ nav:main }}
             {{ if !only_footer }}
             <a href="{{ url }}"
-               class="whitespace-nowrap px-3 py-2 hover:bg-gray-600 hover:bg-opacity-50 rounded-lg uppercase block text-xl font-medium text-white hover:text-gray-300">
+               class="whitespace-nowrap px-3 py-2 hover:bg-background-600 hover:bg-opacity-50 rounded-lg uppercase block text-xl font-medium text-font-primary hover:text-gray-300">
                 {{ emoji }}
                 {{ title }}
             </a>
@@ -53,7 +53,7 @@
             <div class="flex justify-center mt-3">
                 {{ nav:main }}
                 {{ if only_footer }}
-                <a href="{{ url }}" class="block text-lg font-medium text-gray-500 hover:text-gray-300">
+                <a href="{{ url }}" class="block text-lg font-medium text-font-hover hover:text-gray-300">
                     {{ title }}
                 </a>
                 {{ /if }}
@@ -61,8 +61,8 @@
             </div>
         </div>
     </div>
-    <div class="flex flex-col z-40 justify-between h-full p-1 md:p-3 bg-gray-800 ">
-        <div class="text-4xl md:text-5xl text-gray-400 hover:text-gray-500 cursor-pointer" @click="open = !open">
+    <div class="flex flex-col z-40 justify-between h-full p-1 md:p-3 bg-background-800 ">
+        <div class="text-4xl md:text-5xl text-font-secondary hover:text-font-hover cursor-pointer" @click="open = !open">
             <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-em w-em" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd"
                       d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
@@ -75,7 +75,7 @@
         </div>
         <div class="flex flex-col justify-end ">
             {{ nav:social_media }}
-            <a href="{{ url }}" class="block flex flex-col items-center text-gray-400 hover:text-gray-500 mt-3">
+            <a href="{{ url }}" class="block flex flex-col items-center text-font-secondary hover:text-font-hover mt-3">
                 <span class="sr-only">{{ title }}</span>
                 {{ icon }}
                 <span class="rotate-90 mt-4 mb-5 md:block hidden">@tobi</span>
