@@ -1,0 +1,74 @@
+<div class="fixed bg-gray-800 z-30 h-screen flex right-0 top-0 bottom-0 border-l border-background-700" x-data="{ open: false, animation: false }" @click.outside="open = false; setTimeout(() => animationDone = open, 1000)">
+    <div
+        x-show="open"
+        x-transition:enter="transition ease-in-out duration-300 transform"
+        x-transition:enter-start="translate-x-full"
+        x-transition:enter-end="translate-x-0"
+        x-transition:leave="transition ease-in-out duration-300 transform"
+        x-transition:leave-start="translate-x-0"
+        x-transition:leave-end="translate-x-full"
+       class="absolute right-full flex flex-col justify-between py-3 px-5 h-full md:w-auto bg-opacity-90 bg-gray-800"
+    >
+        <nav class="space-y-5 flex-grow">
+            <a href="/" class="px-3 block flex items-center">
+                <div class="h-8 w-8 sm:w-10 sm:h-10">
+                    <img class="h-full w-full"
+                         src="https://tailwindui.com/img/logos/workflow-mark-teal-200-cyan-400.svg" alt="">
+                </div>
+                <div class="text-xl text-gray-50 uppercase ml-2">BitBench</div>
+            </a>
+            {{ nav:main }}
+            {{ if !only_footer }}
+            <a href="{{ url }}"
+               class="whitespace-nowrap px-3 py-2 hover:bg-gray-600 hover:bg-opacity-50 rounded-lg uppercase block text-xl font-medium text-white hover:text-gray-300">
+                {{ emoji }}
+                {{ title }}
+            </a>
+            {{ /if }}
+            {{ /nav:main }}
+        </nav>
+
+        <div>
+            <div class="flex justify-center">
+                <div class="ml-3 inline-flex w-full">
+                    <a href="#"
+                       class="inline-flex w-full items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200">
+                        Contact me
+                    </a>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-3">
+                {{ nav:main }}
+                {{ if only_footer }}
+                <a href="{{ url }}" class="block text-lg font-medium text-gray-500 hover:text-gray-300">
+                    {{ title }}
+                </a>
+                {{ /if }}
+                {{ /nav:main }}
+            </div>
+        </div>
+    </div>
+    <div class="flex flex-col z-40 justify-between h-full p-1 md:p-3 bg-gray-800 ">
+        <div class="text-4xl md:text-5xl text-gray-400 hover:text-gray-500 cursor-pointer" @click="open = !open; setTimeout(() => $nextTick(() => animation = open), 301)">
+            <svg x-show="!open" xmlns="http://www.w3.org/2000/svg" class="h-em w-em" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                      d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                      clip-rule="evenodd"/>
+            </svg>
+
+            <svg x-show="open" xmlns="http://www.w3.org/2000/svg" class="h-em w-em" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+        </div>
+        <div class="flex flex-col justify-end ">
+            {{ nav:social_media }}
+            <a href="{{ url }}" class="block flex flex-col items-center text-gray-400 hover:text-gray-500 mt-3">
+                <span class="sr-only">{{ title }}</span>
+                {{ icon }}
+                <span class="rotate-90 mt-4 mb-5 md:block hidden">@tobi</span>
+            </a>
+            {{ /nav:social_media }}
+        </div>
+    </div>
+</div>

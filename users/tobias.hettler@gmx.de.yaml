@@ -1,4 +1,16 @@
 name: Tobi
 super: true
+avatar: avatars/210424-Tobi-Smokebombs-24-1.png
 id: 1cfd3a17-8ebc-4c6e-a6a7-74b95b4fcd53
 password_hash: $2y$10$f0ovhgDjhw.BzW3XgrGk3uwvz13SLBjCMdt.ZvXYUqIZhMtq0BTou
+preferences:
+  collections:
+    pages:
+      after_save: continue_editing
+    blog:
+      per_page: 10
+    bits:
+      after_save: continue_editing
+  assets:
+    feature_images:
+      mode: grid

@@ -29,10 +29,16 @@ return [
     */
 
     'disks' => [
-
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),
+        ],
+
+        'assets' => [
+            'driver' => 'local',
+            'root' => public_path('assets'),
+            'visibility' => 'public',
+            'url' => '/assets',
         ],
 
         'public' => [

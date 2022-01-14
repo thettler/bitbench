@@ -1,0 +1,24 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: only_footer
+        field:
+          default: false
+          display: 'Only Footer'
+          type: toggle
+          icon: toggle
+          instructions: 'Show only on in Footer Nav'
+          listable: hidden
+          instructions_position: above
+      -
+        handle: emoji
+        field:
+          input_type: text
+          antlers: false
+          display: Emoji
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above

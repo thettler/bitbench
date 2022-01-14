@@ -1,0 +1,19 @@
+<div class="grid min-h-screen row-auto md:grid-cols-2 h-auto md:h-screen">
+    {{ tiles }}
+        <a class="block w-full aspect-square md:aspect-auto  relative overflow-hidden group border-gray-800 first:border-b-2 first:border-r-2 second:border-b-2 second:border-l-2 third:border-t-2 third:border-r-2 last:border-t-2 last:border-l-2 " href="{{ link }}">
+            <div class="absolute z-10 w-full h-full flex flex-col justify-center items-center">
+            <div class="p-1 md:p-3 text-center group-hover:scale-110 transition transition-scale">
+                    <p class="mt-1 text-2xl font-extrabold text-gray-50 sm:text-5xl sm:tracking-tight md:text-6xl text-shadow">{{ title }}</p>
+                    <p class="max-w-xl mt-5 mx-auto text-base sm:text-lg md:text-xl font-bold text-gray-50 transition-all text-shadow">{{ description }}</p>
+            </div>
+        </div>
+
+        <div class="absolute w-full h-full group-hover:scale-105 transition-all">
+            <div class="absolute w-full h-full bg-gray-800 opacity-50 group-hover:opacity-75 transition transition-opacity"></div>
+            <img class="h-full w-full object-cover " src="{{ backdrop }}" alt="{{ backdrop:alt }}">
+        </div>
+    </a>
+    {{ /tiles }}
+</div>
+
+

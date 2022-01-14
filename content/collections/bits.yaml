@@ -1,0 +1,11 @@
+title: Bits
+template: bits/show
+layout: layout
+taxonomies:
+  - technology
+revisions: false
+route: '/bits/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

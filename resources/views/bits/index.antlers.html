@@ -1,0 +1,29 @@
+<div class="relative max-w-7xl mx-auto">
+    <div class="text-center">
+        <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+            Bits
+        </h2>
+        <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+            Small tipps and tricks or stuff you might not know
+        </p>
+    </div>
+
+
+    {{ collection:bits paginate="9" as="bits" }}
+        <div class="mt-12 max-w-2xl space-y-5 mx-auto lg:max-w-none">
+            {{ bits }}
+                {{ partial:bits/card }}
+            {{ /bits }}
+        </div>
+
+        {{ paginate }}
+            {{ auto_links }}
+        {{ /paginate }}
+
+    {{ /collection:bits }}
+</div>
+
+
+
+
+
