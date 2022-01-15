@@ -6,7 +6,7 @@
         {{ slot }}
 
         {{ if label }}
-            <span class="">{{ label }}</span>
+            <span class="text-font-primary tracking-wide font-bold" style=" {{ if text_color }} color: {{ text_color }}; {{ /if }}">{{ label }}</span>
         {{ /if }}
     </span>
 </div>

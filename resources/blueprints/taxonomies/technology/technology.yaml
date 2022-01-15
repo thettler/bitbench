@@ -40,6 +40,19 @@ sections:
           icon: color
           listable: hidden
           instructions_position: above
+      -
+        handle: text_color
+        field:
+          theme: classic
+          lock_opacity: false
+          default_color_mode: HEXA
+          color_modes:
+            - HEXA
+          display: 'Text Color'
+          type: color
+          icon: color
+          listable: hidden
+          instructions_position: above
   sidebar:
     display: Sidebar
     fields:

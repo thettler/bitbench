@@ -17,8 +17,10 @@ module.exports = {
             teal: colors.teal,
             cyan: colors.cyan,
             background: colors.gray,
+            'primary': colors.teal,
+            'secondary': colors.teal,
             'font-primary': colors.gray['50'],
-            'font-secondary': colors.gray['400'],
+            'font-secondary': colors.gray['300'],
             'font-hover': colors.gray['500'],
         },
         spacing: {
