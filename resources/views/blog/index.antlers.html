@@ -1,22 +1,10 @@
-<div>
-    <div class="relative h-48 md:h-64 shadow-lg">
-        <div class="absolute flex items-end w-full h-full bg-background-800 bg-opacity-75 group-hover:opacity-75 transition transition-opacity">
-            <div class="px-4 sm:px-6 lg:px-8 py-2">
-                <h1 class="text-font-primary md:text-5xl text-3xl font-bold">{{ title }}</h1>
-                <p class="text-font-primary text-md md:text-lg  font-semibold mt-3 tracking-wide">{{ subheadline }}</p>
-            </div>
-        </div>
-        <img class="h-full w-full object-cover" src="{{ hero_image }}" alt="{{ hero_image:alt }}">
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 mt-3">
+    <div>
+        <h1 class="text-font-primary md:text-5xl text-3xl font-bold">{{ title }}</h1>
+        <p class="text-font-primary text-md md:text-lg  font-semibold mt-3 tracking-wide">{{ subheadline }}</p>
     </div>
-</div>
-
-<div class="relative max-w-7xl mx-auto px-4 py-4 min-h-screen">
-    <!-- This example requires Tailwind CSS v2.0+ -->
-
-
-
     {{ collection:blog paginate="9" as="posts" }}
-        <div class="mt-12 max-w-lg mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3  md:max-w-none">
+        <div class="mt-12 max-w-7xl mx-auto grid gap-5 md:grid-cols-2 lg:grid-cols-3  md:max-w-none">
             {{ posts }}
                 {{ partial:blog/card }}
             {{ /posts }}

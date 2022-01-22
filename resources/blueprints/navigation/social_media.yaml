@@ -19,3 +19,13 @@ sections:
           instructions: 'Icon as SVG  add "class="h-6 w-6" fill="currentColor""'
           listable: hidden
           instructions_position: above
+      -
+        handle: username
+        field:
+          input_type: text
+          antlers: false
+          display: Username
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above

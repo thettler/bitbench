@@ -1,16 +1,11 @@
-<div class="relative max-w-7xl mx-auto">
-    <div class="text-center">
-        <h2 class="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
-            Bits
-        </h2>
-        <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-            Small tipps and tricks or stuff you might not know
-        </p>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 mt-3">
+    <div>
+        <h1 class="text-font-primary md:text-5xl text-3xl font-bold">{{ title }}</h1>
+        <p class="text-font-primary text-lg md:text-xl font-normal mt-3 tracking-wide">{{ subheadline }}</p>
     </div>
 
-
     {{ collection:bits paginate="9" as="bits" }}
-        <div class="mt-12 max-w-2xl space-y-5 mx-auto lg:max-w-none">
+        <div class="mt-12 max-w-7xl space-y-5 mx-auto lg:max-w-none">
             {{ bits }}
                 {{ partial:bits/card }}
             {{ /bits }}
@@ -22,8 +17,3 @@
 
     {{ /collection:bits }}
 </div>
-
-
-
-
-

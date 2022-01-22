@@ -1,12 +1,14 @@
 <div>
     <span
         class="inline-flex items-center px-2 py-0.5 rounded-md text-sm font-medium bg-indigo-100 text-grey-80"
-        style="background-color: {{ color }};"
+        style="background-color: {{ badge_color ?? color }};"
     >
         {{ slot }}
 
         {{ if label }}
-            <span class="text-font-primary tracking-wide font-bold" style=" {{ if text_color }} color: {{ text_color }}; {{ /if }}">{{ label }}</span>
+            <span class=" {{ if white }} text-white {{ else }} text-gray-800 {{ /if }} tracking-wide font-bold">
+                {{ label }}
+            </span>
         {{ /if }}
     </span>
 </div>

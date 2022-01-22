@@ -67,7 +67,12 @@ return [
         */
 
         'presets' => [
-            // 'small' => ['w' => 200, 'h' => 200, 'q' => 75, 'fit' => 'crop'],
+            'thumbnail' => [ 'w' => 400, 'h' => 200, 'q' => 75 ,'fit' => 'crop_focals'],
+            'square_small' => [ 'w' => 100, 'h' => 100, 'q' => 75 ,'fit' => 'crop_focals'],
+            'square_mid' => [ 'w' => 400, 'h' => 400, 'q' => 75 ,'fit' => 'crop_focals'],
+            'square_big' => [ 'w' => 600, 'h' => 600, 'q' => 75 ,'fit' => 'crop_focals'],
+            'hero' => ['w' => 1980, 'h' => 400, 'q' => 75, 'fit' => 'crop_focals'],
+            'hero_big' => ['w' => 1980, 'h' => 600, 'q' => 75, 'fit' => 'crop_focals'],
         ],
 
     ],

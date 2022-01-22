@@ -6,5 +6,7 @@ icon: |-
   </svg>
 color: '#F7DF1E'
 updated_by: 1cfd3a17-8ebc-4c6e-a6a7-74b95b4fcd53
-updated_at: 1642254735
+updated_at: 1642433575
 text_color: '#1C1808'
+link: 'https://developer.mozilla.org/de/docs/Web/JavaScript'
+logo: tech/JavaScript.svg

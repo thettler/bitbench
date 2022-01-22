@@ -17,7 +17,7 @@ module.exports = {
             teal: colors.teal,
             cyan: colors.cyan,
             background: colors.gray,
-            'primary': colors.teal,
+            'primary': colors.sky,
             'secondary': colors.teal,
             'font-primary': colors.gray['50'],
             'font-secondary': colors.gray['300'],
