@@ -12,7 +12,7 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "statamic/cms": "3.2.31"
+        "statamic/cms": "3.3.15"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
