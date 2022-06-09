@@ -94,7 +94,7 @@ seotamic_open_graph_description: general
 seotamic_twitter_title: title
 seotamic_twitter_description: custom
 updated_by: 1cfd3a17-8ebc-4c6e-a6a7-74b95b4fcd53
-updated_at: 1642881487
+updated_at: 1642887363
 seotamic_custom_twitter_description: 'With this handy little trick you can achive typesafe arrays in PHP without the need of docblocks or third party packages.'
 seotamic_image: blog/TypeSafe-Arrays.jpg
 ---

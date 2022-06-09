@@ -2,7 +2,7 @@ name: 'Tobias Hettler'
 super: true
 avatar: avatars/210424-Tobi-Smokebombs-24-1.png
 id: 1cfd3a17-8ebc-4c6e-a6a7-74b95b4fcd53
-password_hash: $2y$10$f0ovhgDjhw.BzW3XgrGk3uwvz13SLBjCMdt.ZvXYUqIZhMtq0BTou
+password_hash: $2y$10$P1VUqQce6tPTIQj7qafR9eWYKILZZH2h8nuxKtpq6nowM/kBCM56.
 preferences:
   collections:
     pages:
@@ -29,3 +29,4 @@ preferences:
         - datestamp
         - email
         - subject
+      per_page: 500
