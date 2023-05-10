@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="913fc35d-6869-4b59-bd2b-943ec62d7faf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/me/Tobi_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/me/Tobi_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/me/Tobi_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/me/Tobi_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/me/Tobi_5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/stock/code.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/stock/mac-workplace.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/stock/make-it-happen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/stock/pexels-daria-obymaha-1684151.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/stock/pexels-negative-space-160107.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/stock/pexels-olia-danilevich-4974915.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/assets/images/stock/workplace-plants.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/ArticleCard.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Box.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/DarkModeToggle.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/Galerie.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/components/MobileNavigation.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/first-post.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/second-post.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/posts/third-post.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/+page.server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/+page.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/about/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/api/posts/+server.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/articles/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/footer.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/header.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/projects/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/routes/uses/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="+layout" />
+        <option value="header" />
+        <option value="footer" />
+        <option value="DarkModeToggle" />
+        <option value="+page.server" />
+        <option value="+page" />
+        <option value="MobileNavigation" />
+        <option value="Galerie" />
+        <option value="ArticleCard" />
+        <option value="Box" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="fihh9q19" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2" />
+  <component name="ProjectId" id="249smjpd0SVq4BcqWnuMob8GVxQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.laravel-idea.search-composer-json": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "next",
+    "last_opened_file_path": "/Users/tobiashettler/Code/Projects/bitbench/src/posts",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "settings.editor.selected.configurable": "com.intellij.deno.DenoConfigurable",
+    "ts.external.directory.path": "/Users/tobiashettler/Code/Projects/bitbench/node_modules/typescript/lib",
+    "use.deno.dismiss": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/posts" />
+      <recent name="$PROJECT_DIR$/src/routes" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/lib/assets/images/stock" />
+      <recent name="$PROJECT_DIR$/src/lib/assets/images/me" />
+      <recent name="$PROJECT_DIR$/src/lib/assets" />
+      <recent name="$PROJECT_DIR$/static/images/me" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="913fc35d-6869-4b59-bd2b-943ec62d7faf" name="Changes" comment="" />
+      <created>1643054298771</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643054298771</updated>
+      <workItem from="1643054301097" duration="93000" />
+      <workItem from="1643054403545" duration="47000" />
+      <workItem from="1643054463156" duration="57000" />
+      <workItem from="1643054553934" duration="90000" />
+      <workItem from="1643054658318" duration="439000" />
+      <workItem from="1654807982825" duration="754000" />
+      <workItem from="1665931058538" duration="2730000" />
+      <workItem from="1665933821878" duration="32000" />
+      <workItem from="1683542828693" duration="49518000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
