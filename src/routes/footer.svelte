@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {navigation} from "$lib/config.ts";
+    import {navigation} from "$lib/config";
 
     const year = new Date().getFullYear();
 </script>

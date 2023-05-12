@@ -1,10 +1,10 @@
 import type {Actions} from './$types';
 import {fail} from "@sveltejs/kit";
-import * as fs from "fs";
-import {parse} from 'csv/sync';
+import {ID, Query} from "appwrite";
+import {X_APPWRITE_BASE_PATH, X_APPWRITE_KEY, X_APPWRITE_PROJECT} from "$env/static/private"
 
 export const actions = {
-    default: async ({request}) => {
+    default: async ({request, fetch}) => {
         const data = await request.formData();
         const email = data.get('email');
 
@@ -18,27 +18,41 @@ export const actions = {
             return fail(422, {errors: {email: ['No valid email provided!']}});
         }
 
-        if (emailExists(email.toString())) {
+        const emailExistResponse = await fetch(
+            X_APPWRITE_BASE_PATH + '/databases/newsletter/collections/emails/documents?queries[]=' + Query.equal('email', [email]).toString(),
+            {
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Appwrite-Project': X_APPWRITE_PROJECT,
+                    'X-Appwrite-Key': X_APPWRITE_KEY
+                }
+            })
+
+        const json = await emailExistResponse.json();
+
+        if (json.total !== 0) {
             return {success: true};
         }
 
-        const csv = `${email},${new Date().toISOString()}\n`;
-        fs.appendFileSync('./storage/emails.csv', csv);
+
+        await fetch(
+            X_APPWRITE_BASE_PATH + '/databases/newsletter/collections/emails/documents',
+            {
+                body: JSON.stringify({
+                    documentId: ID.unique(),
+                    data: {
+                        email,
+                        created_at: new Date().toISOString()
+                    },
+                }),
+                method: 'post',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Appwrite-Project': X_APPWRITE_PROJECT,
+                    'X-Appwrite-Key': X_APPWRITE_KEY
+                }
+            })
 
         return {success: true};
     }
 } satisfies Actions;
-
-
-function emailExists(email: string): boolean {
-    const data = fs.readFileSync('./storage/emails.csv', 'utf8');
-    const rawRecords = parse(data);
-
-    for (const row of rawRecords) {
-        if (row[0] === email) {
-            return true;
-        }
-    }
-
-    return false
-}

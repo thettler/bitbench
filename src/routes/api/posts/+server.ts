@@ -1,7 +1,8 @@
 import {json} from "@sveltejs/kit";
 import type {RequestHandler} from './$types';
 import type {Post} from "$lib/types";
-
+import {categories} from "$lib/config";
+import type {Category} from "$lib/types.js";
 
 export const GET = (async ({url}) => {
     const offset = Number(url.searchParams.get('offset') ?? '0');
@@ -15,14 +16,15 @@ export const GET = (async ({url}) => {
 }) satisfies RequestHandler;
 
 async function getPosts(offset = 0, take: null | number = null) {
-    const paths: Record<string, Record<string, any>> = import.meta.glob('/src/posts/*.md', {eager: true})
+    const paths: Record<string, Record<string, any>> = import.meta.glob('/src/contents/*/+article.md', {eager: true})
     take = take ?? Object.keys(paths).length
 
     return Object.entries(paths)
         .slice(offset, offset + take)
         .map(([path, file]) => ({
             ...file.metadata,
-            slug: path.split('/').at(-1)?.replace('.md', ''),
+            slug: path.split('/').at(-2),
+            categories: (file.metadata?.categories ?? []),
             date: new Date(file.metadata.date),
         } satisfies Post))
         .filter((post: Post) => post.published)

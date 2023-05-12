@@ -1,7 +1,7 @@
 const colors = require('tailwindcss/colors')
 /** @type {import('tailwindcss').Config} */
 export default {
-    content: ['./src/**/*.{html,js,svelte,ts}'],
+    content: ['./src/**/*.{html,js,svelte,ts,md}'],
     darkMode: 'class',
     theme: {
         extend: {
@@ -21,6 +21,8 @@ export default {
             }
         },
     },
-    plugins: [],
+    plugins: [
+        require('@tailwindcss/typography'),
+    ],
 }
 

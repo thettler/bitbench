@@ -1,5 +1,5 @@
 <script>
-    import {navigation} from "$lib/config.ts";
+    import {navigation} from "$lib/config";
     import {ChevronDown, X} from "lucide-svelte";
 
     let open = false;
@@ -38,7 +38,9 @@
         <nav class="mt-6">
             <ul class="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
                 {#each navigation as item}
-                    <li><a class="block py-2" on:click={()=> open = false} href={item.href}>{item.label}</a></li>
+                    {#if (!item.onlyFooter)}
+                        <li><a class="block py-2" on:click={()=> open = false} href={item.href}>{item.label}</a></li>
+                    {/if}
                 {/each}
             </ul>
         </nav>
