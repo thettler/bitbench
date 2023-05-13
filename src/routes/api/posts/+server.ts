@@ -4,13 +4,14 @@ import type {Post} from "$lib/types";
 import {categories} from "$lib/config";
 import type {Category} from "$lib/types.js";
 
+
 export const GET = (async ({url}) => {
-    const offset = Number(url.searchParams.get('offset') ?? '0');
-    const take = url.searchParams.get('take') == null ? null : Number(url.searchParams.get('take'));
+    // const offset = Number(url.searchParams.get('offset') ?? '0');
+    // const take = url.searchParams.get('take') == null ? null : Number(url.searchParams.get('take'));
 
     const posts = await getPosts(
-        offset,
-        take,
+        // offset,
+        // take,
     );
     return json(posts)
 }) satisfies RequestHandler;

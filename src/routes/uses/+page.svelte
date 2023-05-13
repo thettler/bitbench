@@ -1,11 +1,14 @@
 <script>
     import TitleSection from "$lib/components/TitleSection.svelte";
-    import {tools} from "$lib/config";
+    import {title, tools} from "$lib/config";
 </script>
+<svelte:head>
+    <title>{title} - Uses</title>
+</svelte:head>
 <TitleSection>
-    Software I use, gadgets I love, and other things I recommend.
+    Languages I use, tools I love, and other things I recommend.
     <svelte:fragment slot="subtitle">
-        I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking
+        I get asked a lot about the things I use to build software, make my life a bit easier, or buy to fool myself into thinking
         I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff.
     </svelte:fragment>
 </TitleSection>

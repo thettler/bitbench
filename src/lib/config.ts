@@ -167,25 +167,120 @@ export const tools: ToolCategory[] = [
         tools: [
             {
                 name: 'PHP',
-                description: 'I’m honestly not even sure what features I get with this that aren’t just part of the macOS Terminal but it’s what I use.'
+                description: 'My one big love, i started programming with PHP and i am still in love with it. Every version PHP gets better and better together ' +
+                    'with the community and the ecosystem PHP is hands down the best way to write websites, apis and more.'
+            },
+            {
+                name: 'Laravel',
+                description: 'This Framework just gives you so much. I use Laravel since version 5.0 and ' +
+                    'i am always baffled how quickly it lets you create your next big thing with extensive scaffolding and tools out of the box.'
             },
             {
                 name: 'JavaScript/TypeScript',
-                description: 'Great software for working with databases. Has saved me from building about a thousand admin interfaces for my various projects over the years.'
+                description: 'There it is my love/hate relation. You can create amazing stuff with JS and TS but sometimes it can get ' +
+                    'really frustrating. Regardless one of the versatile languages you can think of.'
+            },
+            {
+                name: 'Vue',
+                description: 'Still one of my go to JS Frameworks to get the job done. It is just simple and lets you create pretty much everything you can think of.'
+            },
+            {
+                name: 'Svelte/SvelteKit',
+                description: 'Svelte is my new darling, i still like Vue but after building this blog with SvelteKit, ' +
+                    'vue has a new contender as my go to JS Framework.'
+            },
+            {
+                name: 'tailwindcss',
+                description: 'How did we ever write css without tailwind...? ' +
+                    'Adam really created a amazing framework to quickly build your styles without any compromise.'
+            },
+        ]
+    },
+    {
+        id: 'packages',
+        name: 'Life saving packages',
+        tools: [
+            {
+                name: 'inertia.js',
+                description: 'What a life saver if you do not want to deal with all of the SPA, Client Authentication and ' +
+                    'routing stuff and still want a cool fast SPA or SSR rendered Frontend. Huge recommendation!'
+            },
+            {
+                name: 'PHPStan',
+                description: 'There was a time where i did not like types in languages, this time is long over and i love the confident und ' +
+                    'security that type languages give me. PHPStan is the perfect package to get the benefits of static typed languages into PHP.'
+            },
+            {
+                name: 'Pest',
+                description: 'I am lazy.I do not want to test my application manual everytime i change something. Gladly because of Pest i do not need to. ' +
+                    'Pest is the perfect tool to quickly write unit tests in php based und PHPUnit.'
             },
         ]
     },
     {
         id: 'tools',
-        name: 'Tools',
+        name: 'Development tools',
         tools: [
             {
                 name: 'PHPStorm',
-                description: 'I’m honestly not even sure what features I get with this that aren’t just part of the macOS Terminal but it’s what I use.'
+                description: "The IDE to conquer them all! PHPStorm is simply amazing, with all it's build in features and tools it " +
+                    "replaced a lot of other standalone apps i had on my PC. Refactoring is a blast with this thing, " +
+                    "just use the refactor actions and PHPStorm does all the busy work for you."
             },
             {
-                name: 'Github',
-                description: 'Great software for working with databases. Has saved me from building about a thousand admin interfaces for my various projects over the years.'
+                name: 'Forge',
+                description: "I am not much of a server guy. That's why i love Forge so much. " +
+                    "It takes all of the complicated managing stuff out of the deployment and let's me ship my apps fast and reliably."
+            },
+        ]
+    },
+    {
+        id: 'design',
+        name: 'Design',
+        tools: [
+            {
+                name: 'Figma',
+                description: "Most of the time i design directly in the browser, but if i need a real design ool Figma is my way to go. " +
+                    "It is simple, a joy to use and gets pretty much every job done i have to do with it."
+            },
+        ]
+    },
+    {
+        id: 'setup',
+        name: 'My Setup',
+        tools: [
+            {
+                name: '14" MacBook Pro, M1 Pro 32GB RAM (2021)',
+                description: 'I was using an Intel-based 14” MacBook Pro prior to this and the difference is night and day. I’ve never heard the fans turn on a single time, ' +
+                    'even under the incredibly heavy loads I put it through it stays quite.'
+            },
+            {
+                name: 'Samsung LF32TU87 32" 4k Display',
+                description: 'A great big monitor with a lot of pixels and a integrated usb-hub that can charge my Mac ' +
+                    'and delivers the image with one single USB-C Cable.'
+            },
+            {
+                name: 'Logitech MX Master Keys & MX Master 3',
+                description: 'Just good mouse and keyboard. The mouse is very ergonomic and has a nice ' +
+                    'vertical scroll wheel which comes handy if you scroll through code. ' +
+                    'The keyboard is nice and heavy and has a super type feeling.'
+            },
+        ]
+    },
+    {
+        id: 'productivity',
+        name: 'Productivity',
+        tools: [
+            {
+                name: 'Obsidian',
+                description: 'Ordering notes in directories never really worked for me so Obsidian is the perfekt tool ' +
+                    'to link all of my thoughts together without the need to create a huge pile of nested directories. And all of your ' +
+                    'files are locally on your machine. No cloud needed.'
+            },
+            {
+                name: 'Arc Browser',
+                description: 'The newest tool i adopted. I quite like Arc, it lets me organise my tabs in workspaces and helps me to focus on the given project ' +
+                    'and takes a way the distractions of a cluttered tab bar.'
             },
         ]
     }
