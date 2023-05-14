@@ -1,5 +1,5 @@
 ---
-title: "PHT: Building Typescript for PHP"
+title: 'PHT: Building Typescript for PHP'
 description: In this first Blog post of mine i talk about the things you can expect from this Blog and my future plans.
 date: '2022-03-25'
 categories:
@@ -8,9 +8,9 @@ categories:
 published: true
 ---
 
-
 ## Introduction
-------------
+
+---
 
 PHP is great, I love to write PHP it has a beautiful Ecosystem and it gets better and better with each new version. But there are also some things about PHP that are not that great. For Example: No Generics, or any build in static analysis or type checker that would tell me before runtime if something is wrong.
 
@@ -30,7 +30,8 @@ In this post we will build just that, a little “compiler”. It will only be a
 > Why PHT? It stands for: PHP TypeProcessor. Does this acronym really make sense? No! But it sounds good and to be fair the PHP acronym is also a little far-fetched, so I think it is perfect :D
 
 ## The Concept
------------
+
+---
 
 ### How can we use the PHT in our PHP Applications
 
@@ -39,12 +40,14 @@ This is the central question. How can we include a new language with build proce
 My solution: We need to compile our PHT Code to PHP and then simply modify the composer autoload function to use the compiled PHP instead of the original PHT.
 
 In a normal PHP Application we use PSR4 and Composer to load our files. Every time we use a class an autoload function gets triggered. This Function simply looks at the namespace of the class and converts it into a file path and includes the file. This function looks something like this:
+
 ```php
 function autoload(string $class): void {
     $file = $this->classToFilePath($class);
     include $file;
 }
 ```
+
 > Of course in the real world this function is a bit bigger.
 
 So this seems like the perfect place to hook into the autoloading and simply point all of our PHT classes to a compiled .php file. More on that later.
@@ -65,21 +68,23 @@ Why? The compiler gives us everything we need for type checking and more, but it
 So we will use RegEx and transform the files to PHP with DocBlocks for PHPStan, to still get some of that sweet static analysis .This will be buggy and can’t reflect all of PHPs features but for now this is fine.
 
 ## The Syntax
-----------
+
+---
 
 So now is time for the fun part. How should our new language look.  
 First we will define a feature set that we want to implement:
 
-*   Generics
-*   Typed variables
-*   Support for the PHPStan Types like `class-string` or typed Arrays like `string[]`
-*   And a bit of syntax sugar
-    *   using `fn` instead of `function` for defining every method and function
-    *   the visibility of class members are `protected` if nothing is specified
-    *   `public` is renamed to `pub`
-    *   if no return type is specified we will set `void`
+- Generics
+- Typed variables
+- Support for the PHPStan Types like `class-string` or typed Arrays like `string[]`
+- And a bit of syntax sugar
+  - using `fn` instead of `function` for defining every method and function
+  - the visibility of class members are `protected` if nothing is specified
+  - `public` is renamed to `pub`
+  - if no return type is specified we will set `void`
 
 So PHT looks like this:
+
 ```php
 class MyPHT<T> {
    $protectedAttribute: string;
@@ -99,7 +104,9 @@ class MyPHT<T> {
    }‚
 }
 ```
+
 and will compile into this:
+
 ```php
 /**
 * @template T
@@ -132,12 +139,15 @@ class MyPHT {
    }
 }
 ```
+
 ## PHT to PHP transform
---------------------
+
+---
 
 Let’s start with the transforming. I will not go into detail on this step because its just RegEx and string replacements. So here just a quick overview:
 
 We create a main Compiler class that has one method and receives a string and returns a string. The receiving string will be our PHT code and the returning string will be our PHP code. So it looks something like this:
+
 ```php
 class PhtCompiler implements Compiler
 {
@@ -150,7 +160,9 @@ class PhtCompiler implements Compiler
     }
 }
 ```
+
 Inside the `compile()` we call different compilers that handle a specific feature like Classes or Variables. They implement the same `Compiler` interface and looking something like this:
+
 ```php
 class VariableCompiler implements Compiler
 {
@@ -179,11 +191,13 @@ EOF;
 ```
 
 ## Autoloading PHT
----------------
+
+---
 
 Now the interesting part. How can we hook into the autoloading of php.
 
 As it turns out It's actually pretty simple. PHP provides us with `spl_`\* functions that let us define our autoload behavior. We can simply register our own autoloader that redirects all PHT Classes to a compiled PHP file:
+
 ```php
 use Composer\Autoload\ClassLoader;
 use function Composer\Autoload\includeFile;
@@ -200,8 +214,8 @@ class PHT
     ) {
             // Here we register our autoload function
         spl_autoload_register(function ($class) use ($src, $target, $loader) {
-            
-                  // first we check if composer can find the class, if it can 
+
+                  // first we check if composer can find the class, if it can
                   // we know its a simple PHP class and we do nothing
                   if ($file = $loader->findFile($class)) {
                 includeFile($file);
@@ -209,8 +223,8 @@ class PHT
                 return true;
             }
 
-                  // here it gets hacky we want to use the findFileWithExtension() on the 
-                  // Composer Class loader, but it is private, so we simply use reflection 
+                  // here it gets hacky we want to use the findFileWithExtension() on the
+                  // Composer Class loader, but it is private, so we simply use reflection
                   // and make the method public available.
                   // Not something for production but its good enough for now
             $loaderRef = (new \ReflectionClass($loader));
@@ -232,6 +246,7 @@ class PHT
     }
 }
 ```
+
 This implementation is not perfect, but it works, for now.
 
 > Can you spot a potential bug? There is at least one. Tell me on twitter [@bitbench](https://twitter.com/bitbench)
@@ -239,18 +254,22 @@ This implementation is not perfect, but it works, for now.
 Now we just need to call it after the import of our composer `autoload.php`
 
 In Laravel this file is at `public/index.php`
+
 ```php
 $loader = require __DIR__.'/../vendor/autoload.php';
 Thettler\Pht\PHT::autoload($loader);
 ```
+
 ## Make it a usable Command
-------------------------
+
+---
 
 Now we only need to pack everything into a usable command, and we are good to go. We are using the Symfony Console, Flysystem and React PHP to build a little naive file watcher and trigger the file compilations.
+
 ```php
 class DevCommand extends Command
 {
-      
+
    // ...
 
     /**
@@ -274,7 +293,7 @@ class DevCommand extends Command
 
         $output->writeln('Started Watching for .pht files:');
 
-            // not great but good enough 
+            // not great but good enough
         $this->loop->addPeriodicTimer(.5, function () use ($output) {
             $files = $this->getPhtFiles($this->src);
 
@@ -296,12 +315,14 @@ class DevCommand extends Command
    //...
 }
 ```
+
 So now we can simply call our command and the File watcher will compile all .pht files to php.
 
 > If you use the package [https://github.com/thettler/pht](https://github.com/thettler/pht) this command looks like `./vendor/bin/pht dev`
 
 ## Conclusion
-----------
+
+---
 
 And that's it. We can now write PHT and use it inside our existing Code. If you want to try it out yourself I have everything on GitHub. You can install it into your projects to test it out. I tested it with Laravel. But be aware that it is probably buggy and only supports classes [https://github.com/thettler/pht](https://github.com/thettler/pht)
 

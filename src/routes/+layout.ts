@@ -1,3 +1,7 @@
-import type {PageLoad} from "./$types";
+import type { LayoutLoad } from './$types';
+
 export const prerender = true;
-export const load = (async ({url}) => ({url: url.pathname})) satisfies PageLoad
+
+export const load = (async ({ url }) => {
+	return { url: url.pathname };
+}) satisfies LayoutLoad;

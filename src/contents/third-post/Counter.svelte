@@ -1,5 +1,5 @@
 <script lang="ts">
-    let count = 0
+	let count = 0;
 </script>
 
-<button on:click={()=>count = count + 1}>{count}</button>
+<button on:click={() => (count = count + 1)}>{count}</button>

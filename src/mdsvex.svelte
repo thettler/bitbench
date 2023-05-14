@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
-    import img from '$lib/components/mdsvex/Img.svelte';
+	import img from '$lib/components/mdsvex/Img.svelte';
 
-    export {img};
+	export { img };
 </script>
 
-<slot/>
+<slot />

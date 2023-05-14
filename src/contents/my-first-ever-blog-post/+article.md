@@ -5,6 +5,7 @@ date: '2022-01-21'
 categories:
 published: true
 ---
+
 ## Hello and welcome to my blog, nice that you found your way here.
 
 ### About me
@@ -17,15 +18,17 @@ I also want to share the things I've learned, and will learn, over the years wit
 
 I'm going to write about best practices, tips, how to dos and also my opinion on coding topics.
 
-*The topics will be:*
+_The topics will be:_
+
 - PHP
-- Laravel 
-- Javascript 
-- Typescript 
-- Vue 
+- Laravel
+- Javascript
+- Typescript
+- Vue
 - And much more all around WebDevelopment...
 
-*In fact, two are already planned:*
+_In fact, two are already planned:_
+
 - How to set up your M1 Mac for PHP development
 - How to set up Laravel with static analysis, DDD and other Quality of Life tools.
 
@@ -49,8 +52,8 @@ If you don't want to miss anything i would be happy if you follow me on my Socia
 - Instagram
 - Twitter
 
-> If you or your current employer are looking for a Laravel Full Stack Developer, 
+> If you or your current employer are looking for a Laravel Full Stack Developer,
 > feel welcome to write me. At the moment i am open for new cool challanges.
 
 I hope I've raised your curiosity, and you'll be back for more exciting articles.
-*See you in the next post and Keep coding.*
+_See you in the next post and Keep coding._
