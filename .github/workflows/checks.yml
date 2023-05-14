@@ -1,0 +1,41 @@
+name: Checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    # We're running on ubuntu-latest, nothing special
+    runs-on: ubuntu-latest
+    steps:
+      # As usual, we simply checkout the project
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Format Code
+        run: npm run format
+
+  test:
+
+    needs: build
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # Download the build from the previous step.
+      - uses: actions/download-artifact@v2
+        with:
+          name: build
+          path: build
+
+      - name: Typescript
+        run: npm run check
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit Test
+        run: npm run test:unit
