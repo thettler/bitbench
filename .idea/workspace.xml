@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="913fc35d-6869-4b59-bd2b-943ec62d7faf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/lib/components/NavigationItem.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/components/MobileNavigation.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/MobileNavigation.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/NavigationItem.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/components/NavigationItem.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.server.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/+page.server.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/header.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

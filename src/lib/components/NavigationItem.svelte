@@ -43,3 +43,22 @@
         </a>
     </li>
 {/if}
+
+<style>
+    @keyframes Pulse {
+        from {
+            transform: scaleY(1);
+        }
+        to {
+            transform: scaleY(3.5);
+        }
+    }
+
+    .pulse {
+        animation-timing-function: ease-in-out;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-name: Pulse;
+    }
+</style>

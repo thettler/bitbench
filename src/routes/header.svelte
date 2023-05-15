@@ -43,21 +43,3 @@
     </div>
 </header>
 
-<style>
-    @keyframes Pulse {
-        from {
-            transform: scaleY(1);
-        }
-        to {
-            transform: scaleY(3);
-        }
-    }
-
-    .pulse {
-        animation-timing-function: ease-in-out;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-name: Pulse;
-    }
-</style>
