@@ -49,8 +49,9 @@
 				{#each navigation as item}
 					{#if !item.onlyFooter}
 						<li>
-							<a class="block py-2" on:click={() => (open = false)} href={item.href}>{item.label}</a
-							>
+							<a class="block py-2" on:click={() => (open = false)} href={item.href}>
+								{item.label}
+							</a>
 						</li>
 					{/if}
 				{/each}
