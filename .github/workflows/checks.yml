@@ -20,27 +20,6 @@ jobs:
       - name: Format Code
         run: npm run format
 
-      - name: Upload build and .svelte-kit folder
-        uses: actions/upload-artifact@v2
-        with:
-          name: build
-          if-no-files-found: error
-          path: build
-
-  test:
-
-    needs: build
-
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      # Download the build from the previous step.
-      - uses: actions/download-artifact@v2
-        with:
-          name: build
-          path: build
-
       - name: Typescript
         run: npm run check
 
