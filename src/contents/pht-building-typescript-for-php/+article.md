@@ -4,7 +4,7 @@ description: In this first Blog post of mine i talk about the things you can exp
 date: '2022-03-25'
 categories:
   - PHP
-  - RegEx
+  - Regex
 published: true
 ---
 
@@ -14,8 +14,7 @@ published: true
 
 PHP is great, I love to write PHP it has a beautiful Ecosystem and it gets better and better with each new version. But there are also some things about PHP that are not that great. For Example: No Generics, or any build in static analysis or type checker that would tell me before runtime if something is wrong.
 
-![Code Image](/code.jpg)
-Of course there a Packages for that, like PHPStan or Psalm, which are great, but you need to write DocBlocks, to really benefit from them which is not ideal because it's more to write, it's interrupts the coding flow when I defining a function signature for example, and sometimes I have to double define types.
+Of course there a Packages for that, like PHPStan or Psalm, which are great, but you need to write DocBlocks, to really benefit from them which is not ideal because it's more to write, it's interrupts the coding flow when I'm defining a function signature for example, and sometimes I have to double define types.
 
 > Regardless I love the confident those tools give me when writing applications.
 
