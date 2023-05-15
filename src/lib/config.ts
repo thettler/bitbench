@@ -43,7 +43,7 @@ import type { Category, Project, ToolCategory } from '$lib/types';
 
 export const title = 'Bitbench';
 export const description = 'Bitbench is the Blog of Tobias Hettler';
-export const url: string = dev ? 'http://localhost:5173/' : 'https://bitbench.dev/';
+export const url: string = dev ? 'http://localhost:5173' : 'https://bitbench.dev';
 export const navigation = [
 	{
 		label: 'Home',

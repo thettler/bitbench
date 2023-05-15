@@ -4,7 +4,9 @@
 	import Footer from './footer.svelte';
 	import Transition from '$lib/components/Transition.svelte';
 	import type { PageData } from './$types';
-	import { title } from '$lib/config';
+	import {title, url} from '$lib/config';
+	import {page} from "$app/stores";
+	import ogImage from "$lib/assets/images/me/Tobi_1.jpg?w=1080&h=1080&imagetool'";
 
 	export let data: PageData;
 </script>
@@ -13,7 +15,12 @@
 	<title>
 		{title}
 	</title>
+	<meta property="og:title" content={title} />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={$page.url.href} />
+	<meta property="og:image" content={url + ogImage} />
 </svelte:head>
+
 <div class="px-4 sm:px-8 lg:px-12 dark:text-zinc-300 text-zinc-800 overflow-hidden">
 	<Header />
 
