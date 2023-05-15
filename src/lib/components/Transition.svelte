@@ -11,7 +11,7 @@
 		from = e.from?.route.id ?? '';
 	});
 
-	function flyScale(node: Element, params: Record<string, string>) {
+	function flyScale(node: Element, params: Record<string, number>) {
 		if (from === '/articles' && url.startsWith('/articles/')) {
 			return fly(node, params as FlyParams);
 		}
