@@ -8,6 +8,8 @@ env:
   X_APPWRITE_BASE_PATH: Monday
   X_APPWRITE_KEY: Monday
   X_APPWRITE_PROJECT: Mondy
+  NEWSLETTER_DATABASE: Mondy
+  NEWSLETTER_COLLECTION: Mondy
 jobs:
   build:
     # We're running on ubuntu-latest, nothing special
