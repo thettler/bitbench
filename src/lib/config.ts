@@ -46,6 +46,10 @@ export const description = 'Bitbench is the Blog of Tobias Hettler';
 export const url: string = dev ? 'http://localhost:5173/' : 'https://bitbench.dev/';
 export const navigation = [
 	{
+		label: 'Home',
+		href: '/'
+	},
+	{
 		label: 'About',
 		href: '/about'
 	},
