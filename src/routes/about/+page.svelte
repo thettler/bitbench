@@ -53,7 +53,7 @@
 					</h1>
 					<p class="mt-6 text-xl leading-8">
 						I have worked in various companies and learned a lot from them, but there was always the
-						whish to become independent and start something on my own. So in 2022, I gathered my
+						wish to become independent and start something on my own. So in 2022, I gathered my
 						courage and became a freelancer.
 					</p>
 				</div>
@@ -91,7 +91,7 @@
 					<li class="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40 flex">
 						<a
 							class="group flex text-sm font-medium text-zinc-800 transition hover:text-teal-500 dark:text-zinc-200 dark:hover:text-teal-500"
-							href="mailto:toibas.hettler@bitbench.dev"
+							href="mailto:tobias.hettler@bitbench.dev"
 						>
 							<svg
 								viewBox="0 0 24 24"
@@ -103,7 +103,7 @@
 									d="M6 5a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H6Zm.245 2.187a.75.75 0 0 0-.99 1.126l6.25 5.5a.75.75 0 0 0 .99 0l6.25-5.5a.75.75 0 0 0-.99-1.126L12 12.251 6.245 7.187Z"
 								/>
 							</svg>
-							<span class="ml-4">toibas.hettler@bitbench.dev</span></a
+							<span class="ml-4">tobias.hettler@bitbench.dev</span></a
 						>
 					</li>
 				</ul>

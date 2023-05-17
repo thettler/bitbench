@@ -14,7 +14,7 @@
 <TitleSection>
 	Writing on Web development, tips and tricks and more.
 	<svelte:fragment slot="subtitle">
-		All of my long-form thoughts on programming, application architecture, tips and guids that i
+		All of my long-form thoughts on programming, application architecture, tips and guides that i
 		wished exist.
 	</svelte:fragment>
 </TitleSection>

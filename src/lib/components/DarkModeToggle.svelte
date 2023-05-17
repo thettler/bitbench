@@ -53,7 +53,7 @@
 			class="h-6 w-6 fill-zinc-100 dark:hidden group-hover:animate-spin stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-500 dark:fill-teal-50 dark:stroke-zinc-700 dark:group-hover:fill-teal-50 dark:group-hover:stroke-teal-600"
 		/>
 		<Moon
-			aria-checked={enabled}
+				aria-hidden={enabled}
 			class="hidden h-6 w-6 fill-zinc-700 group-hover:animate-pulse stroke-zinc-500 transition dark:block dark:group-hover:stroke-teal-500 dark:fill-teal-400/10 dark:stroke-zinc-400"
 		/>
 	</button>
